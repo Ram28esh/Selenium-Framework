@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+
+	<groups>
+		<run>
+			<include name="Error handling" />
+		</run>
+	</groups>
+
+<listeners>
+<listener class-name="RameshSwarnkarAutomation.TestComponents.Listeners"/>
+</listeners>
+
+	<test thread-count="5" name="E2EFunctinalValidation">
+		<classes>
+			<class name="RameshSwarnkarAutomation.TestCases.WithFrameworkTest" />
+		</classes>
+	</test> <!--
+	Test -->
+
+	<test thread-count="5" name="ErrorValidations">
+		<classes>
+			<class name="RameshSwarnkarAutomation.TestCases.ErrorValidationsTest" />
+		</classes>
+	</test>
+</suite>
